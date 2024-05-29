@@ -59,6 +59,7 @@ const AnnouncementEdit = () => {
 
             await axios.post(`${URL}/api/announcement`, formData);
             toast.success("Announcement added successfully");
+            fetchAnnouncements();
             setFormData({ ...formData, name: "" });
         } catch (error) {
             console.log(error);
