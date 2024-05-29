@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from 'react'
+import { URL } from "../App";
 import { toast } from "react-toastify";
 import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
 import loader from "../images/loader.gif";
@@ -14,7 +15,7 @@ const AnnouncementEdit = () => {
     const fetchAnnouncements = async () => {
         setIsLoading(true);
         try {
-            const response = await axios.get(`http://localhost:5000/api/announcement`);
+            const response = await axios.get(`${URL}/api/announcement`);
             setAnnouncements(response.data);
             setIsLoading(false);
         } catch (error) {
@@ -56,7 +57,7 @@ const AnnouncementEdit = () => {
                 return toast.error("You can't add more than 3 announcements.");
             }
 
-            await axios.post(`http://localhost:5000/api/announcement`, formData);
+            await axios.post(`${URL}/api/announcement`, formData);
             toast.success("Announcement added successfully");
             setFormData({ ...formData, name: "" });
         } catch (error) {
@@ -67,7 +68,7 @@ const AnnouncementEdit = () => {
     //deleting announcements from database
     const deleteAnnouncement = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/announcement/${id}`);
+            await axios.delete(`${URL}/api/announcement/${id}`);
             toast.success("Announcement deleted successfully");
             fetchAnnouncements();
         } catch (error) {
@@ -96,7 +97,7 @@ const AnnouncementEdit = () => {
         }
 
         try {
-            await axios.put(`http://localhost:5000/api/announcement/${announcementID}`, formData);
+            await axios.put(`${URL}/api/announcement/${announcementID}`, formData);
             toast.success("Announcement edited successfully");
             setFormData({ ...formData, name: "" });
             setIsEditing(false);
