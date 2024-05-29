@@ -1,0 +1,129 @@
+/* .news_head{
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+} */
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+
+.inner_row {
+  width: 50%;
+  float: left;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.common_heading {
+  font: 3.5em/1;
+  color: #000;
+  margin: 0 0 33px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.common_heading::after {
+  background: #c00404;
+  content: "";
+  width: 4px;
+  position: absolute;
+  top: 4px;
+  bottom: 6px;
+  left: 0;
+  margin: auto;
+}
+
+.view_all {
+  width: 50%;
+  float: left;
+  position: relative;
+  padding-left: 15px;
+  /* padding-right: 63px; */
+}
+
+.news_view_all {
+  float: right;
+  font-size: 16px;
+  line-height: 40px;
+  color: #c00404;
+  padding-right: 15px;
+  position: relative;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  background: transparent;
+}
+
+.news_view_all::after {
+  content: "";
+  /* background: url(/themes/custom/iitm/assets/images/sprite.png) no-repeat; */
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 10px;
+  background-position: -687px -85px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.display_flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .news-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.events-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+} */
+
+/* Words Section */
+.headcardcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headcard {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+
+.head-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head-text {
+  text-align: justify;
+}
+
+.slide-img {
+  height: 800px;
+}

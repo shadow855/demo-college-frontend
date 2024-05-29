@@ -1,0 +1,159 @@
+/* Announcement.css */
+
+.marquee-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f5f5f5;
+}
+
+.marquee-heading {
+  width: 20%;
+  height: 55px;
+  padding: 10px;
+  background-color: black;
+  color: #ccc;
+  font-weight: bold;
+  text-align: center;
+  position: relative; /* Add relative positioning */
+}
+
+/* Add this CSS to create the arrow pointer pointing left */
+.marquee-heading::before {
+  content: '';
+  position: absolute;
+  top: 50%; /* Position vertically in the middle */
+  right: -10px; /* Adjust this value to control the distance of the arrow from the right border */
+  border-width: 8px 0 8px 8px; /* Change the border-width values */
+  border-style: solid;
+  border-color: transparent transparent transparent black; /* Change the border-color values */
+  transform: translateY(-50%); /* Vertically center the arrow */
+}
+
+.marquee-top-container {
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  overflow: hidden;
+}
+
+.marquee-announcement-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-announcement-container {
+  display: flex;
+  /* width: calc(100% * 8); Change to the calculated total width */
+  animation: scrollText 30s linear infinite;
+  animation-play-state: running; /* Initially, the animation is running */
+}
+
+.marquee-announcement-item {
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  white-space: nowrap; /* Ensure announcements stay in one line */
+}
+
+/* Added hover effect to pause the animation */
+.marquee-container:hover .marquee-announcement-container {
+  animation-play-state: paused;
+}
+.marquee-announcement-item:hover{
+  cursor: pointer;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%); /* Change to -100% to reverse the animation */
+  }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1350px) {
+  .marquee-announcement-container {
+    display: flex;
+    width: calc(100% * 1.2 ); /* Change to the calculated total width */
+    animation: scrollText 30s linear infinite;
+    animation-play-state: running; /* Initially, the animation is running */
+  }
+}
+
+@media (max-width: 1200px) {
+  .marquee-announcement-container {
+    display: flex;
+    width: calc(100% * 2 ); /* Change to the calculated total width */
+    animation: scrollText 30s linear infinite;
+    animation-play-state: running; /* Initially, the animation is running */
+  }
+}
+
+@media (max-width: 900px) {
+  .marquee-announcement-container {
+    display: flex;
+    width: calc(100% * 3.3 ); /* Change to the calculated total width */
+    animation: scrollText 30s linear infinite;
+    animation-play-state: running; /* Initially, the animation is running */
+  }
+}
+
+@media (max-width: 600px) {
+  .marquee-announcement-container {
+    display: flex;
+    width: calc(100% * 4.1 ); /* Change to the calculated total width */
+    animation: scrollText 30s linear infinite;
+    animation-play-state: running; /* Initially, the animation is running */
+  }
+}
+
+@media (max-width: 500px) {
+  .marquee-announcement-container {
+    display: flex;
+    width: calc(100% * 4.3 ); /* Change to the calculated total width */
+    animation: scrollText 30s linear infinite;
+    animation-play-state: running; /* Initially, the animation is running */
+  }
+}
+
+@media (max-width: 400px) {
+  .marquee-announcement-container {
+    display: flex;
+    width: calc(100% * 6 ); /* Change to the calculated total width */
+    animation: scrollText 30s linear infinite;
+    animation-play-state: running; /* Initially, the animation is running */
+  }
+}
+
+@media (max-width: 350px) {
+  .marquee-announcement-container {
+    display: flex;
+    width: calc(100% * 7.3 ); /* Change to the calculated total width */
+    animation: scrollText 30s linear infinite;
+    animation-play-state: running; /* Initially, the animation is running */
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-heading {
+    background-color: black;
+    width: 8%;
+    font-size: 0;
+    height: 55px;
+  }
+
+  .marquee-top-container {
+    width: 100%;
+  }
+
+
+  .marquee-announcement-item {
+    margin-right: 20px;
+  }
+}

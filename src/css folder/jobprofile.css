@@ -1,0 +1,22 @@
+th{
+    max-width: 200px;
+    /* set an appropriate max-width */
+    min-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.td-css{
+    max-width: 150px;
+    /* set an appropriate max-width */
+    min-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

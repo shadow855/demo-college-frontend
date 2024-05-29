@@ -1,0 +1,44 @@
+/* For Webkit based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgb(90, 92, 95);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #757070;
+  }
+  
+  /* For Firefox */
+  /* Note: Firefox supports scrollbar-color property starting from version 64 */
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+  
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .scrollbar::-webkit-scrollbar-track {
+    background-color: rgb(90, 92, 95);
+    border-radius: 10px;
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #757070;
+  }
+  
